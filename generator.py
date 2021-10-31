@@ -29,8 +29,6 @@ class GenerateTestData(object):
 
             new_gaussian /= np.random.normal(5.0,0.2,1)[0]
             jump = np.array([i*np.random.normal(1.5,0.2,1)[0]]*new_gaussian.shape[0])
-            print("this is jump")
-            print(jump)
             self.data_points = np.append(self.data_points, new_gaussian + jump)
         #apply noise
         self.apply_noise()
