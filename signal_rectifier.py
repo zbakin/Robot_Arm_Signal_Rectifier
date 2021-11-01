@@ -158,7 +158,6 @@ if __name__ == "__main__":
     parser.add_argument('--path', dest='filepath', required=True, help='path to the dataset file.')
     parser.add_argument('--plot_original', dest='plot_original', help='set this option if you want to plot original data', action="store_true")
     parser.add_argument('--plot_clean', dest='plot_clean', help='set this option if you want to plot rectified smooth clean data', action="store_true")
-    parser.add_argument('--plot', dest='plot_all', help='set this option if you want to plot original and smooth data together', action="store_true")
     parser.add_argument('--print_original', dest='print_original', help='set this option if you want to print original dataset', action="store_true")
     parser.add_argument('--print_clean', dest='print_clean', help='set this option if you want to print clean dataset', action="store_true")
     parser.add_argument('--simple', dest='simple_rectify', help='set this option if you want a simple rectification. Default is advanced.', action="store_true")
@@ -196,11 +195,9 @@ if __name__ == "__main__":
     # Plot original dataset
     if args.plot_original:
         SR.plot_original()
-
     # Plot rectified dataset
-    if args.plot_clean:
+    elif args.plot_clean:
         SR.plot_smooth()
-
-    # Plot original and rectified dataset
-    if args.plot_all:
+    # Plot original and rectified dataset together
+    else:
         SR.plot()
