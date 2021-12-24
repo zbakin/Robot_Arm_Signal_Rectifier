@@ -1,9 +1,9 @@
 # Signal rectifier
 
-## The Gaussian with Jumps test
+## The Gaussian with Jumps
 
 ### The idea behind the problem
-The following problem is quite close to some of the work Shadow Robot Company did at some points. You can imagine the noisy data being the data acquired from a motion capture system and the jump a pause between two actions in this recording. The idea is to replay that recorded data on a robot (hence the filtering for smooth movements), while avoiding jumping between the 2 different part of the action.
+You can imagine the noisy data being the data acquired from a motion capture system and the jump a pause between two actions in this recording. The idea is to replay that recorded data on a robot (hence the filtering for smooth movements), while avoiding jumping between the 2 different part of the action.
 
 ### The problem
 Some data is provided in the `data` folder (which has been generated using the `utils/generator.py` if you're interested). Each line of the file contains x and y, the y data is noisy. 3 main features of signal_rectifier.py:
